@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+</head>
+<body>
+   
+   <h1>Объявить две целочисленные переменные a и b и задать им произвольные начальные значения.</h1>
+   
+   <p>Вывод вконсоль</p>
+   
+   <script>
+       
+       var a = +prompt('Введите первое число');
+       var b = +prompt('Введите второе число');
+       
+       if (a>=0 && b>=0) {
+           c = (a - b);
+           console.log(c);
+       }
+       
+       else if (a<0 && b<0) {
+           c = (a * b);
+           console.log(c);
+       }
+       
+       else if ((a<0 && b>=0) || (a>=0 && b<0)) {
+            c = (a + b);
+            console.log(c);      
+        }
+       
+        else {
+            console.log('Вы ввели не числа')
+        }
+    
+    </script>
+    
+</body>
+</html>

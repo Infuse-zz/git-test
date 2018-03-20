@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5</title>
+</head>
+<body>
+   
+   <h1>Реализовать основные 4 арифметические операции в виде функций с двумя параметрами.</h1>
+    
+   <ol>
+       <li>Операция сложения</li>
+       <li>Операция вычитания</li>
+       <li>Операция умножения</li>
+       <li>Операция деления</li>
+   </ol>  
+   
+   <p>Вывод в консоль</p>
+    
+    
+    <script>
+        
+        function sum(a,b) {
+            return (a + b);
+        }
+        
+        function sub(a,b) {
+            return (a - b);
+        }
+        
+        function mult(a,b) {
+            return(a * b);
+        }
+        
+        function div(a,b) {
+            return(a / b);
+        }
+          
+        var a = +prompt('Введите первое число');
+        var b = +prompt('Введите первое число');
+        console.log(sum(a,b));  
+        console.log(sub(a,b)); 
+        console.log(mult(a,b)); 
+        console.log(div(a,b).toFixed(1)); 
+        
+    </script>
+    
+</body>
+</html>
