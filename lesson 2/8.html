@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 8</title>
+</head>
+<body>
+    
+    <h1>С помощью рекурсии организовать функцию возведения числа в степень.</h1>
+    
+    <p>Вывод в консоль</p>
+    
+    <script>
+
+       function power(val,pow) {
+
+        c = Math.pow(val,pow);
+        alert('При возведении числа ' + val + ' в степень ' + pow + ' будет ' + c);
+        return c; 
+            }
+
+        var val = +prompt('Введите число');
+        var pow = +prompt('Введите степень');   
+        power(val,pow); 
+        
+    </script>
+    
+</body>
+</html>
