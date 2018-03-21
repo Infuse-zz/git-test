@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Практикум - Угадай число!</title>
+</head>
+<body>
+   
+<h1>Угадай число!</h1>   
+    
+<script>
+    
+    alert('Давай играть! Я загадал четырехзначное число. Угадай какое?');
+    
+    var a = +prompt('Введите четырехзначное число');
+    var result = ((1000 + Math.random()*9999).toFixed(0));
+    console.log(result);
+    
+    if (a>result) {
+        alert('Ты загадал слишком большее. Попробуй меньше');
+        +prompt('Введите четырехзначное число');
+    }
+    
+    else if (a<result) {
+        alert('Ты загадал слишком маленькое. Попробуй больше');
+        +prompt('Введите четырехзначное число');
+    }
+    
+    else {
+        alert('Вау! ТЫ УГАДАЛ!')
+    }
+    
+    
+</script>    
+    
+    
+</body>
+</html>
