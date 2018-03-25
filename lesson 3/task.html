@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Практикум</title>
+</head>
+<body>
+   
+   <h1>Быки и коровы</h1>
+   
+    <script>
+     
+    alert('Давай играть! Я загадал четырехзначное число. Угадай какое?');    
+        
+    var result = String((1000 + Math.random()*(9999-1000)).toFixed(0));
+    console.log(result);  
+        
+    var resultArr = result.split(''); //
+    console.log(resultArr.length);    
+    
+    var guess = String(prompt('Введи четырехзначное число'));
+    console.log(guess);
+        
+    var guessArr = guess.split('');     
+        
+        
+    for (var i=0; i<guessArr.length; i++) { //счетчик массива ввода
+        
+        for (var j=0; j<resultArr.length; j++) { //счетчик массива загаданного числа
+            
+            if (guessArr[i]==resultArr[j]) {
+                console.log(' корова'); //совпало и число и позиция
+            }
+            
+        }
+        
+    }
+        
+    
+</script>       
+    
+    
+</body>
+</html>
