@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+</head>
+<body>
+   
+   <h1>Написать функцию, преобразующую число в объект. </h1>
+    <p>Вывод в консоль</p>
+    
+    
+    <script>
+    
+    let threeDigits = {
+        units: 0,
+        tens: 0,
+        hundrets: 0
+    }
+    
+    console.log(threeDigits);
+        
+    let enter = prompt('Введите число от 0 до 999');
+    
+    if (isNaN(enter)) {
+        console.log('Вы ввели не число')
+    }    
+        
+    else if (enter.length>3)   {
+        console.log('Вы ввели слишком большое число ');
+    }    
+         
+    else  {
+        enter = String(enter);
+        let enterArr = enter.split('');  
+
+        threeDigits.units = enterArr[2];
+        threeDigits.tens = enterArr[1];    
+        threeDigits.hundrets = enterArr[0];    
+        console.log(threeDigits);
+        }
+       
+
+    </script>
+    
+</body>
+</html>
