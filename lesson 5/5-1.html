@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 1</title>
+</head>
+<body>
+   
+<h1>Шахматная доска</h1> 
+     
+   
+<script>
+        
+var letters = ['','A','B','C','D','E','F','G','H',''];
+var blackFigures = ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜', '♟'];          
+var whiteFigures = ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖', '♙'];    
+var cellArr = [];    
+    
+var table = document.createElement("TABLE");
+document.body.appendChild(table);
+   
+table.style.border = 1 + "px solid #000";      
+table.style.width = "360px";
+table.style.height = "360px";
+table.style.textAlign = "center";
+
+    
+    for (var i=0; i<10; i++) {
+        var tr = document.createElement("TR"); 
+        tr.style.height = "36px";
+        table.appendChild(tr);
+        
+        for (var j=0; j<10; j++) {
+            var td = document.createElement("TD");
+            td.style.width = "36px";
+            tr.appendChild(td);
+            cellArr.push(td);
+
+            if ((i%2==0 && j%2==0) || (i%2==1 && j%2==1)) {
+                td.style.backgroundColor = "brown";
+            }
+            
+        
+        }
+         
+    }
+    
+    for (i=0; i<letters.length; i++) {
+        cellArr[i].innerText = letters[i];    
+    }
+    
+    for (i=0; i<8; i++) {
+        cellArr[i+11].innerText = blackFigures[i];    
+    }
+    
+    for (i=0; i<8; i++) {
+        cellArr[i+21].innerText = blackFigures[8];    
+    }
+    
+    for (i=0; i<8; i++) {
+        cellArr[i+71].innerText = whiteFigures[8];    
+    }
+    
+    for (i=0; i<8; i++) {
+        cellArr[i+81].innerText = whiteFigures[i]; 
+    }
+    
+    for (i=0; i<letters.length; i++) {
+        cellArr[i+90].innerText = letters[i];    
+    }  
+    
+    
+    for (i=10; i<90; i+=10) {
+        cellArr[i].innerText = (i/10);   
+        }
+    
+    for (i=19; i<90; i+=10) {
+        cellArr[i].innerText = (i-9)/10;   
+    }
+           
+
+    for (var q=0; q<letters.length; q++) {
+    var setLettersFirst = table.children[0].children[q];
+    var setLettersLast = table.children[9].children[q];
+    setLettersFirst.style.backgroundColor = "white";
+    setLettersLast.style.backgroundColor = "white";
+    
+    var setNumbersFirst = table.children[q].children[0];
+    var setNumbersLast = table.children[q].children[9];
+    setNumbersFirst.style.backgroundColor = "white";  
+    setNumbersLast.style.backgroundColor = "white";
+    
+}     
+
+    
+</script>
+      
+    
+</body>
+</html>
