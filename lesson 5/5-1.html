@@ -49,12 +49,24 @@ table.style.textAlign = "center";
         cellArr[i].innerText = letters[i];    
     }
     
+    for (i=0; i<letters.length; i++) {
+        cellArr[i+90].innerText = letters[i];    
+    }  
+ 
+    for (i=10; i<90; i+=10) {
+        cellArr[i].innerText = (i/10);   
+    }
+    
+    for (i=19; i<90; i+=10) {
+        cellArr[i].innerText = (i-9)/10; 
+    }
+    
     for (i=0; i<8; i++) {
         cellArr[i+11].innerText = blackFigures[i];    
     }
     
     for (i=0; i<8; i++) {
-        cellArr[i+21].innerText = blackFigures[8];    
+        cellArr[i+21].innerText = blackFigures[8];
     }
     
     for (i=0; i<8; i++) {
@@ -63,20 +75,9 @@ table.style.textAlign = "center";
     
     for (i=0; i<8; i++) {
         cellArr[i+81].innerText = whiteFigures[i]; 
-    }
-    
-    for (i=0; i<letters.length; i++) {
-        cellArr[i+90].innerText = letters[i];    
     }  
     
-    
-    for (i=10; i<90; i+=10) {
-        cellArr[i].innerText = (i/10);   
-        }
-    
-    for (i=19; i<90; i+=10) {
-        cellArr[i].innerText = (i-9)/10;   
-    }
+
            
 
     for (var q=0; q<letters.length; q++) {
@@ -84,11 +85,13 @@ table.style.textAlign = "center";
     var setLettersLast = table.children[9].children[q];
     setLettersFirst.style.backgroundColor = "white";
     setLettersLast.style.backgroundColor = "white";
+    setLettersLast.style.transform = "rotate(180deg)";
     
     var setNumbersFirst = table.children[q].children[0];
     var setNumbersLast = table.children[q].children[9];
     setNumbersFirst.style.backgroundColor = "white";  
     setNumbersLast.style.backgroundColor = "white";
+    setNumbersLast.style.transform = "rotate(180deg)";
     
 }     
 
