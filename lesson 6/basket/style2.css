@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: auto;
+}
+
+.content {
+    width: 1300px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f4f4f4;
+}
+
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.item {
+    background-color: #ffffff;
+    width: 340px;
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+}
+
+.buy-button {
+    display: block;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+    border: 0;
+    background-color: coral;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.buy-button:hover {
+    background-color: chocolate;
+}
+
+.item a {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #000000;
+    line-height: 18px;
+}
+
+.item a:hover {
+    color: coral;
+}
+
+.price {
+    margin-top: 20px;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.inbasket {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
