@@ -1,6 +1,6 @@
-var width = 286, //размер картинки с отступами
-count = 3, //количество картинок
-position = 0; //начальная позиция
+var width = 286, 
+count = 3, 
+position = 0; 
 
 var list = document.querySelector(".list"), 
     arrow = document.querySelectorAll(".arrow"),
@@ -25,9 +25,22 @@ x = [];
 for (i=0; i<images.length; i++){
 x.push(images[i].id);
 }
-     
+
+function imgChange(id) {
+    
+    document.getElementById(this.id).onerror = warn();
+    
     document.getElementById("big_picture").innerHTML="<img src='images/" + this.id + ".jpg'>";
+    
     }
+
+function warn() {
+    var cover = document.getElementById("big_picture");
+    cover.style.width ="960px";
+    cover.style.height="500px";
+    cover.style.backgroundColor ="#999999";
+}
+
 
 images[0].addEventListener('click', imgChange);
 images[1].addEventListener('click', imgChange);
